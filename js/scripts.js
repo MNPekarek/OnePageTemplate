@@ -261,26 +261,41 @@ document.getElementById('searchBar').addEventListener('input', (event) => {
 });
 
 
-/*
 document.addEventListener('DOMContentLoaded', () => {
     const windowWidth = window.innerWidth;
   
-    if (windowWidth > 768) { 
-      // Cambiar animaciones de fade-up a fade-right en pantallas grandes SOLO para línea del tiempo
+    // Asegurarse de que AOS no afecte al body (eliminamos cualquier data-aos en el body)
+    const body = document.querySelector('body');
+    if (body && body.hasAttribute('data-aos')) {
+      body.removeAttribute('data-aos');
+    }
+  
+    // Cambiar animaciones de fade-up a fade-right solo para pantallas grandes (para línea del tiempo)
+    if (windowWidth > 768) {
       const timelineItems = document.querySelectorAll('.timeline-panel[data-aos="fade-up"]');
-      
       timelineItems.forEach(el => {
         el.setAttribute('data-aos', 'fade-right');
       });
     }
   
+    // Asegurarse de que solo se apliquen animaciones a los elementos adecuados (no al body)
     // Inicializar AOS después de los cambios
     AOS.init({
       offset: 50, // Ajustar el desplazamiento
       duration: 600, // Duración de las animaciones
       once: true, // Animaciones solo una vez
+      disable: function() {
+        // Desactivar AOS en pantallas pequeñas (<=768px)
+        return windowWidth <= 768; // Solo desactivar AOS en dispositivos móviles
+      },
+      startEvent: 'DOMContentLoaded', // Asegurarse de que AOS se inicie después de que el DOM esté listo
+      initClassName: 'aos-init', // Usar una clase diferente para la inicialización
+      animatedClassName: 'aos-animate', // Usar una clase diferente para la animación
+      useClassNames: true, // Usar clases CSS para la animación
+      throttleDelay: 99,
+      // Evitar que AOS se aplique en el body:
+      disableMutationObserver: true, // Desactivar observador de mutaciones para evitar que AOS se active en el body
     });
   });
   
-*/
   

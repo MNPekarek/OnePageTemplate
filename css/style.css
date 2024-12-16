@@ -994,8 +994,12 @@ body {
   position: relative;
   background-color: #ffffff;
   color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: "Josefin Sans", sans-serif;
+}
+
+body[data-aos] {
+  animation: none !important;
+  transition: none !important;
 }
 
 body.night-mode {
