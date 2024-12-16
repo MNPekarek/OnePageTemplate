@@ -261,7 +261,7 @@ document.getElementById('searchBar').addEventListener('input', (event) => {
 });
 
 
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const windowWidth = window.innerWidth;
   
@@ -282,5 +282,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-  
+*/
   
