@@ -57,6 +57,7 @@
 
 
 <link rel="preload" href="./assets/img/header/DALL·E 2024-12-15 480px.webp" as="image" type="image/webp">
+<link rel="preload" href="./assets/img/navbar-logo-movil.webp" as="image" type="image/webp">
 
 <style>
     header.masthead {
@@ -64,7 +65,7 @@
       padding-bottom: 6rem;
       text-align: center;
       color: white;
-      background-image: url("./assets/img/header/DALL·E\ 2024-12-15\ 480px.webp") no-repeat center center;
+      background-image: url("./assets/img/header/DALL·E\ 2024-12-15\ 480px.webp");
       background-size: cover;
     }
   
@@ -110,7 +111,14 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent" data-aos="none" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="./assets/img/navbar-logo1.png" alt="logo" /></a>
+            <a class="navbar-brand" href="#page-top">
+                <picture>
+                    <!-- logo para mobile -->
+                     <source srcset="./assets/img/navbar-logo-movil.webp" media="(max-width: 768px)">
+                     <!-- logo para desktop -->
+                      <img src="./assets/img/navbar-logo-desktop.webp" alt="Logo" width="250" height="68">
+                </picture>
+            </a>
             <button id="theme-toggle" type="button">🌙</button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
