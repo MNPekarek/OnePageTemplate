@@ -260,7 +260,7 @@ document.getElementById('searchBar').addEventListener('input', (event) => {
     });
 });
 
-
+// Esperar a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     const windowWidth = window.innerWidth;
   
@@ -277,28 +277,31 @@ document.addEventListener('DOMContentLoaded', () => {
         el.setAttribute('data-aos', 'fade-right');
       });
     }
+  });
   
-    // Asegurarse de que solo se apliquen animaciones a los elementos adecuados (no al body)
-    // Inicializar AOS después de los cambios
+  // Esperar a que la página completa (recursos e imágenes) esté cargada
+  window.addEventListener('load', () => {
+    // Inicializar AOS después de que toda la página haya cargado
     AOS.init({
       offset: 50, // Ajustar el desplazamiento
       duration: 600, // Duración de las animaciones
       once: true, // Animaciones solo una vez
-      disable: function() {
+      disable: function () {
         // Desactivar AOS en pantallas pequeñas (<=768px)
-        return windowWidth <= 768; // Solo desactivar AOS en dispositivos móviles
+        return window.innerWidth <= 768; 
       },
-      startEvent: 'DOMContentLoaded', // Asegurarse de que AOS se inicie después de que el DOM esté listo
       initClassName: 'aos-init', // Usar una clase diferente para la inicialización
       animatedClassName: 'aos-animate', // Usar una clase diferente para la animación
       useClassNames: true, // Usar clases CSS para la animación
       throttleDelay: 99,
-      // Evitar que AOS se aplique en el body:
-      disableMutationObserver: true, // Desactivar observador de mutaciones para evitar que AOS se active en el body
+      disableMutationObserver: true, // Desactivar observador de mutaciones
     });
+  
+    // Establecer la imagen de fondo del header
+    const header = document.querySelector('header.masthead');
+    if (header) {
+      header.style.backgroundImage = 'url(../assets/img/header/DALL·E 2024-12-15 480px.webp)';
+    }
   });
   
-  window.addEventListener('load', () => {
-    document.querySelector('header.masthead').style.backgroundImage = 'url(../assets/img/header/DALL·E 2024-12-15 480px.webp)';
-  });
   
