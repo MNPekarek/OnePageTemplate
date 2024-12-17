@@ -984,6 +984,11 @@ body.night-mode .portfolio-modal .container .row .col-lg-8 .modal-body .btn:hove
   color: #ffffff;
 }
 
+@font-face {
+  font-family: "Agu Display";
+  src: url("https://fonts.googleapis.com/css2?family=Agu+Display&display=swap") format("woff2");
+  font-display: swap;
+}
 *,
 *::before,
 *::after {

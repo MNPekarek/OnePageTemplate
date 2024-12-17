@@ -298,4 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+  window.addEventListener('load', () => {
+    document.querySelector('header.masthead').style.backgroundImage = 'url(../assets/img/header/DALL·E 2024-12-15 480px.webp)';
+  });
   

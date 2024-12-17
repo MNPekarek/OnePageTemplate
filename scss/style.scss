@@ -11,7 +11,11 @@
 @use "modal";
 
 
-
+@font-face {
+  font-family: 'Agu Display';
+  src: url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap') format('woff2');
+  font-display: swap;
+}
 
 
 *,
