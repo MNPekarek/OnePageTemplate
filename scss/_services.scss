@@ -16,6 +16,7 @@
   
   
         .text-center {
+          min-height: 150px;
   
   
           .section-heading {
@@ -32,13 +33,15 @@
   
   
           .col-md-4 {
-  
+            min-height: 400px; //Asigna altura minima para evitar saltos 
   
             .fa-stack {
-  
+              width: 6rem; // Asegura que la pila de íconos tenga un tamaño fijo
+              height: 6rem;
   
               .fa-circle {
                 //color: #ffc400; // Color primario
+                font-size: 6rem; //tamaño del circulo
   
               }
   
@@ -47,6 +50,7 @@
                 background:  var.$colortext4;
                 border-radius: 100%;
                 text-align: center;
+                font-size: 3rem; //tamaño del icono dentro del circulo
   
               }
             }
