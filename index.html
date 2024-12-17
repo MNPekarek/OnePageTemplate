@@ -53,8 +53,8 @@
 
 <!-- Google Fonts con "display=swap" para evitar bloqueo -->
 
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+
 
 <link rel="preload" href="./assets/img/header/DALL·E 2024-12-15 480px.webp" as="image" type="image/webp">
 
@@ -64,7 +64,8 @@
       padding-bottom: 6rem;
       text-align: center;
       color: white;
-      background-color: #333;
+      background-image: url("./assets/img/header/DALL·E\ 2024-12-15\ 480px.webp") no-repeat center center;
+      background-size: cover;
     }
   
     header.masthead .container {
@@ -98,7 +99,7 @@
 
 
 <!-- Archivo CSS personalizado -->
-<link rel="stylesheet" href="./css/style.css" defer>
+<link rel="stylesheet" href="./css/style.css" media="print" onload="this.media='all'">
 
 
 
