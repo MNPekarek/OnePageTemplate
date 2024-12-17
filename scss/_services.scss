@@ -19,8 +19,7 @@
   
   
           .section-heading {
-            @include mixin.title;   
-            font-family: "Agu Display",serif;       
+            @include mixin.title;         
           }
   
           .section-subheading {
@@ -45,26 +44,9 @@
   
               .fa-inverse {
                 //color: #fff; // Ícono blanco encima del círculo
-                background: linear-gradient(90deg, var.$colortext1, var.$colortext2, var.$colortext3, var.$colortext4);
+                background:  var.$colortext4;
                 border-radius: 100%;
-                animation: gradient-animation 3s ease infinite;
                 text-align: center;
-  
-  
-                @keyframes gradient-animation {
-                  0% {
-                    background-position: 0% 50%;
-                  }
-  
-                  50% {
-                    background-position: 100% 50%;
-                  }
-  
-                  100% {
-                    background-position: 0% 50%;
-                  }
-                }
-  
   
               }
             }

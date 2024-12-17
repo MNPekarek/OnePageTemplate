@@ -173,7 +173,6 @@ header.masthead .container .btn-xl:hover {
   font-size: 2.5rem;
   margin-top: 0px;
   margin-bottom: 1rem;
-  font-family: "Agu Display", serif;
 }
 #services.page-section .container .text-center .section-subheading {
   font-size: 1rem;
@@ -183,21 +182,9 @@ header.masthead .container .btn-xl:hover {
   color: rgba(108, 117, 125, 0.75);
 }
 #services.page-section .container .row .col-md-4 .fa-stack .fa-inverse {
-  background: linear-gradient(90deg, #ff7eb3, #ff526f, #ff616d, #ff7eb3);
+  background: #ff7eb3;
   border-radius: 100%;
-  animation: gradient-animation 3s ease infinite;
   text-align: center;
-}
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 #services.page-section .container .row .col-md-4 p {
   color: rgba(108, 117, 125, 0.75);
