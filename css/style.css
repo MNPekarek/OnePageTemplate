@@ -169,6 +169,9 @@ header.masthead .container .btn-xl:hover {
     padding: 9rem 0px;
   }
 }
+#services.page-section .container {
+  min-height: 400px;
+}
 #services.page-section .container .text-center {
   min-height: 150px;
 }
@@ -184,8 +187,16 @@ header.masthead .container .btn-xl:hover {
   margin-bottom: 4rem;
   color: rgba(108, 117, 125, 0.75);
 }
+#services.page-section .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 #services.page-section .container .row .col-md-4 {
   min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #services.page-section .container .row .col-md-4 .fa-stack {
   width: 6rem;

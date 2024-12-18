@@ -13,6 +13,7 @@
       }
   
       .container { 
+        min-height: 400px; //altura minima para evitar cambios
         .text-center {
           min-height: 150px;
   
@@ -28,8 +29,14 @@
         }
   
         .row { 
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
           .col-md-4 {
             min-height: 400px; //Asigna altura minima para evitar saltos 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
   
             .fa-stack {
               width: 6rem; // Asegura que la pila de íconos tenga un tamaño fijo
