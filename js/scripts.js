@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-/*
+
   // Esperar a que la página completa (recursos e imágenes) esté cargada
   window.addEventListener('load', () => {
     // Inicializar AOS después de que toda la página haya cargado
@@ -304,5 +304,5 @@ document.addEventListener('DOMContentLoaded', () => {
       header.style.backgroundImage = 'url(../assets/img/header/DALL·E 2024-12-15 480px.webp)';
     }
   });
-  */
+  
   
