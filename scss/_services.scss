@@ -5,16 +5,14 @@
 #services {
   
     &.page-section {
-      padding: 6rem 0px;
+      padding: 6rem 0;
       background-color: #fff;
   
       @include mixin.min-width-768 {
         padding: 9rem 0px;
       }
   
-      .container {
-  
-  
+      .container { 
         .text-center {
           min-height: 150px;
   
@@ -29,9 +27,7 @@
           }
         }
   
-        .row {
-  
-  
+        .row { 
           .col-md-4 {
             min-height: 400px; //Asigna altura minima para evitar saltos 
   
@@ -51,6 +47,8 @@
                 border-radius: 100%;
                 text-align: center;
                 font-size: 3rem; //tamaño del icono dentro del circulo
+                min-width: 3rem; // asegura un tamaño minimo consistente
+                min-height: 3rem; //altura minima para evitar cambios
   
               }
             }

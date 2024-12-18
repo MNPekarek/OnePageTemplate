@@ -161,7 +161,7 @@ header.masthead .container .btn-xl:hover {
 }
 
 #services.page-section {
-  padding: 6rem 0px;
+  padding: 6rem 0;
   background-color: #fff;
 }
 @media (min-width: 768px) {
@@ -199,6 +199,8 @@ header.masthead .container .btn-xl:hover {
   border-radius: 100%;
   text-align: center;
   font-size: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
 }
 #services.page-section .container .row .col-md-4 p {
   color: rgba(108, 117, 125, 0.75);
